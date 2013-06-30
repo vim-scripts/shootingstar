@@ -1,8 +1,8 @@
 " shootingstar.vim:	Like the magic * but start matching at the cursor position
-" Last Modified: Sun 09. Jun 2013 20:46:39 +0200 CEST
+" Last Modified: Sun 30. Jun 2013 15:50:55 +0200 CEST
 " Author:		Jan Christoph Ebersbach <jceb@e-jc.de>
 " Copyright:	2013, Jan Christoph Ebersbach <jceb@e-jc.de>
-" Version:		0.1
+" Version:		0.2
 " License:		VIM license, see :help license
 
 if exists('loaded_shootingstar')
@@ -26,5 +26,7 @@ function! <SID>Shootingstar()
     endif
 endfunction
 
-nnoremap \* /\M\<<C-r>=<SID>Shootingstar()<CR>\><CR>
-nnoremap \# ?\M\<<C-r>=<SID>Shootingstar()<CR>\><CR>
+nnoremap <Leader>* /\M\<<C-r>=<SID>Shootingstar()<CR>\><CR>
+nnoremap <Leader># ?\M\<<C-r>=<SID>Shootingstar()<CR>\><CR>
+nnoremap <Leader>g* /\M<C-r>=<SID>Shootingstar()<CR><CR>
+nnoremap <Leader>g# ?\M<C-r>=<SID>Shootingstar()<CR><CR>
